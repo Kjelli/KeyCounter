@@ -35,6 +35,14 @@ namespace KeyCounterApp
 			HourLabels = new List<string>();
 
 			_isTimeSimulationEnabled = enableTimeSimulation;
+
+			var refDate = DateTime.ParseExact("00:00", "HH:mm", null);
+			for(var i = 0; i < 24; i++)
+			{
+				var hourLabel = FormatHourLabel(refDate.AddHours(i));
+				HourLabels.Add(hourLabel);
+				Keystrokes.Add(0);
+			}
 		}
 
 		public DateTime GetCurrentTime()
@@ -64,13 +72,9 @@ namespace KeyCounterApp
 			}
 
 			var index = currentTime.Hour - _startDateTime.Value.Hour;
+
 			while (index < 0) index += 24;
-			if (index >= Keystrokes.Count || Keystrokes.Count == 0)
-			{
-				var hourLabel = FormatHourLabel(currentTime);
-				HourLabels.Add(hourLabel);
-				Keystrokes.Add(0);
-			}
+
 			Keystrokes[index] += 1;
 			Updated?.Invoke();
 		}
