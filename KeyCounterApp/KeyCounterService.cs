@@ -13,7 +13,6 @@ namespace KeyCounterApp
 		private readonly KeystrokeAPI _api;
 		private readonly Exporter _exporter;
 		private DateTime _lastExported;
-		private DateTime? _startDateTime;
 		private DateTime? _simulatedDateTime;
 		private bool _isTimeSimulationEnabled;
 
@@ -66,14 +65,7 @@ namespace KeyCounterApp
 		private void IncrementKeysCounted()
 		{
 			var currentTime = GetCurrentTime();
-			if (_startDateTime == null)
-			{
-				_startDateTime = currentTime;
-			}
-
-			var index = currentTime.Hour - _startDateTime.Value.Hour;
-
-			while (index < 0) index += 24;
+			var index = currentTime.Hour;
 
 			Keystrokes[index] += 1;
 			Updated?.Invoke();
@@ -97,7 +89,7 @@ namespace KeyCounterApp
 		private string FormatHourLabel(DateTime dateTime)
 		{
 			dateTime = dateTime.AddMinutes(-dateTime.Minute);
-			return $"{dateTime.ToString("HH:mm")}-{dateTime.AddHours(1).ToString("HH:mm")}";
+			return $"{dateTime.ToString("HH:mm")}";
 		}
 
 		public void Export(string filename)

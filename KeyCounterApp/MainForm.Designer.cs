@@ -53,7 +53,7 @@ namespace KeyCounterApp
 			this.KeyCountChart.Location = new System.Drawing.Point(12, 12);
 			this.KeyCountChart.Name = "KeyCountChart";
 			this.KeyCountChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-			this.KeyCountChart.Size = new System.Drawing.Size(523, 175);
+			this.KeyCountChart.Size = new System.Drawing.Size(758, 175);
 			this.KeyCountChart.TabIndex = 3;
 			this.KeyCountChart.Text = "Keycounts";
 			// 
@@ -63,7 +63,7 @@ namespace KeyCounterApp
 			this.StartStopButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.StartStopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.StartStopButton.ForeColor = System.Drawing.Color.White;
-			this.StartStopButton.Location = new System.Drawing.Point(557, 12);
+			this.StartStopButton.Location = new System.Drawing.Point(776, 11);
 			this.StartStopButton.Name = "StartStopButton";
 			this.StartStopButton.Size = new System.Drawing.Size(146, 40);
 			this.StartStopButton.TabIndex = 4;
@@ -74,7 +74,7 @@ namespace KeyCounterApp
 			// ExportButton
 			// 
 			this.ExportButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.ExportButton.Location = new System.Drawing.Point(557, 58);
+			this.ExportButton.Location = new System.Drawing.Point(776, 57);
 			this.ExportButton.Name = "ExportButton";
 			this.ExportButton.Size = new System.Drawing.Size(146, 40);
 			this.ExportButton.TabIndex = 5;
@@ -84,7 +84,7 @@ namespace KeyCounterApp
 			// 
 			// SubtractHour
 			// 
-			this.SubtractHour.Location = new System.Drawing.Point(557, 104);
+			this.SubtractHour.Location = new System.Drawing.Point(776, 103);
 			this.SubtractHour.Name = "SubtractHour";
 			this.SubtractHour.Size = new System.Drawing.Size(66, 23);
 			this.SubtractHour.TabIndex = 8;
@@ -94,7 +94,7 @@ namespace KeyCounterApp
 			// 
 			// AddHour
 			// 
-			this.AddHour.Location = new System.Drawing.Point(635, 104);
+			this.AddHour.Location = new System.Drawing.Point(854, 103);
 			this.AddHour.Name = "AddHour";
 			this.AddHour.Size = new System.Drawing.Size(66, 23);
 			this.AddHour.TabIndex = 9;
@@ -105,7 +105,7 @@ namespace KeyCounterApp
 			// ExitButton
 			// 
 			this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.ExitButton.Location = new System.Drawing.Point(557, 165);
+			this.ExitButton.Location = new System.Drawing.Point(776, 164);
 			this.ExitButton.Name = "ExitButton";
 			this.ExitButton.Size = new System.Drawing.Size(146, 40);
 			this.ExitButton.TabIndex = 10;
@@ -127,7 +127,7 @@ namespace KeyCounterApp
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(715, 217);
+			this.ClientSize = new System.Drawing.Size(934, 217);
 			this.Controls.Add(this.ExportedLabel);
 			this.Controls.Add(this.ExitButton);
 			this.Controls.Add(this.AddHour);
